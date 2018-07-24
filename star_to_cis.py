@@ -47,6 +47,7 @@ with open('particles.star') as particles:
         # remove header lines
         if len(line) > 10:
             # you might want to adjust the range of file name, here [34:-11]
+            # also noticed that relion changes the line of file extract, so you might change line[9] to line[6]
             xy_name.append([line[0], line[1], line[9][34:-11]])
 
 # join particles (x,y) with their images names from cisTEM image names
